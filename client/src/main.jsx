@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { AlertCircle, ArrowUpRight, BarChart3, Building2, CheckCircle2, ClipboardList, Download, FilePlus2, LayoutDashboard, LoaderCircle, LogOut, Menu, MessageSquare, Search, Settings, ShieldCheck, Users, Wrench, X } from 'lucide-react';
 import './styles.css';
 
-const API = 'http://localhost:4000/api';
+const API = (import.meta.env.VITE_API_URL || 'http://localhost:4000/api').replace(/\/$/, '');
 const statuses = ['All', 'Pending', 'In Progress', 'Resolved'];
 const categories = ['All', 'Plumbing', 'Electrical', 'Furniture', 'HVAC', 'Cleaning', 'Other'];
 
